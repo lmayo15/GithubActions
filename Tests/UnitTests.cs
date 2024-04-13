@@ -41,19 +41,19 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void Power_Invalid_LaurenMayo()
+        public void Multiply_Valid_LaurenMayo()
         {
-            Assert.Throws<FormatException>(() => Program.Power("a", "1"));
-            Assert.Throws<FormatException>(() => Program.Power("1", "a"));
-            Assert.Throws<FormatException>(() => Program.Power("a", "a"));
+            Assert.AreEqual(4, Program.Multiply("1", "4"));
+            Assert.AreEqual(18, Program.Multiply("3", "6"));
+            Assert.AreEqual(25, Program.Multiply("5", "5")); 
         }
 
         [Test]
-        public void Power_Null_LaurenMayo()
+        public void Divide_Valid_LaurenMayo()
         {
-            Assert.Throws<ArgumentNullException>(() => Program.Power("null", "null"));
-            Assert.Throws<ArgumentNullException>(() => Program.Power("null", "1"));
-            Assert.Throws<ArgumentNullException>(() => Program.Power("1", "null"));
+            Assert.AreEqual(6, Program.Divide("12", "2"));
+            Assert.AreEqual(3, Program.Divide("27", "9"));
+            Assert.AreEqual(8, Program.Divide("48", "6"));
         }
         
     }
